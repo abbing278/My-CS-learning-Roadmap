@@ -1,2 +1,2 @@
-# My-CS-learning-Roadmap
+# My-learning-Roadmap
 Just to store my steps of learning
