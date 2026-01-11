@@ -1,0 +1,34 @@
+prompt
+
+sample size
+tempreturate、Top-k、Top-p
+
+零样本、单样本、少样本
+
+1. 角色提示（role prompting）：什么角色
+2. 上下文提示（Contextual Prompting）：背景，包括材料
+3. 指令提示（Instruction Prompting）：做什么
+4. 退后提示（Step-back Prompting）：让模型先处理更一般性问题，再解决具体问题的策略
+
+
+CoT（Chain of Thought）:step by step
+自洽性（Self-consistency）：给高温，多次输出结果，按照多数投票的原则，取出出现频率最高的作为答案
+思维树（Tree of Thoughts, ToT）：让模型模拟不同路径，评估效果，然后决策出最适合的那一个
+ReAct（Reasoning & Acting）：
+1. 思考 (Thought)：模型描述当前的情况，并决定下一步需要做什么（例如：“我不知道最新的金价，我需要搜索一下”）。
+2. 行动 (Action)：模型调用一个可用的工具（例如：Search[current gold price]）。
+3. 观察 (Observation)：模型读取工具返回的结果（例如：“搜索结果：今日金价为每克 550 元”）。
+4. 循环：模型根据观察到的新信息，进行下一次“思考”，直到得出最终答案。
+
+Practice：
+1. 提供示例
+2. 简洁、易于理解
+3. 具体说出需要输出的内容
+4. 指令而不是约束：当怎么样，就怎么样；而不是不要怎么样，避免怎么样
+5. 控制输出token长度
+6. 使用变量
+7. 输入格式和写作风格
+8. 用新模型
+9. 使用Schema：比如JSON或者XML格式输出
+10. 记录各种提示尝试
+11. 
